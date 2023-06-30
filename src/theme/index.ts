@@ -1,4 +1,5 @@
-import { DefaultTheme } from "styled-components/native"
+import { DefaultTheme } from "styled-components/native";
+import Constants from 'expo-constants';
 
 export default {
     COLOR: {
@@ -35,5 +36,6 @@ export default {
             SM: 14,
             MD: 16
         }
-    }
+    },
+    STATUSBAR_HEIGHT: Constants.statusBarHeight
 }

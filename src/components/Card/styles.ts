@@ -1,8 +1,14 @@
 import styled, { css } from "styled-components/native";
+import { ArrowUpRight } from 'phosphor-react-native';
 
-export const Title = styled.Text`
+export const CardContainer = styled.View`
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+`;
+
+export const CardTitle = styled.Text`
     text-align: center;
-    margin-top: 52px;
     ${({ theme }) => css`
         font-family: ${theme.FONT_FAMILY.BOLD};
         font-size: ${theme.FONT_SIZE.TITLE.LG}px;
@@ -10,9 +16,8 @@ export const Title = styled.Text`
     `};
 `;
 
-export const SubTitle = styled.Text`
+export const CardText = styled.Text`
     text-align: center;
-    margin-bottom: 37px;
     ${({ theme }) => css`
         font-family: ${theme.FONT_FAMILY.REGULAR};
         font-size: ${theme.FONT_SIZE.BODY.SM}px;
@@ -20,12 +25,8 @@ export const SubTitle = styled.Text`
     `};
 `;
 
-export const Label = styled.Text`
-    ${({ theme }) => css`
-        font-size: ${theme.FONT_SIZE.TITLE.XS}px;
-        font-family: ${theme.FONT_FAMILY.BOLD};
-        color: ${theme.COLOR.GRAY_100};
-    `}
-    text-align: center;
-    margin-bottom: 27px;
+export const CardIcon = styled(ArrowUpRight)`
+    position: absolute;
+    right: 13px;
+    top: 13px;
 `;
